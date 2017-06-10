@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Members [
+  <!ELEMENT Members (Member)>
+  <!ELEMENT Member (name,email,password,role)>
+  <!ELEMENT name (#PCDATA)>
+  <!ELEMENT email (#PCDATA)>
+  <!ELEMENT password (#PCDATA)>
+  <!ELEMENT role (#PCDATA)>
+]>
+<Members>
+  <Member>
+    <name>siddartha</name>
+    <email>ss@ss.com</email>
+    <password>JcJBRXYyllzwQVrObLjbkqeprdk=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>sid</name>
+    <email>sid@sid.com</email>
+    <password>JcJBRXYyllzwQVrObLjbkqeprdk=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>ss</name>
+    <email>sid1@sid.com</email>
+    <password>0DSpTmc3D5JGW2STgJbSaq6wZ+8=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>venu</name>
+    <email>venu@v.com</email>
+    <password>HqbyVvOkDTkwVlQe3gI4J/SdCwA=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>srinu</name>
+    <email>srinu@gmail.com</email>
+    <password>HqbyVvOkDTkwVlQe3gI4J/SdCwA=</password>
+    <role>Staff</role>
+  </Member>
+  <Member>
+    <name>venu</name>
+    <email>venu@venu.com</email>
+    <password>HqbyVvOkDTkwVlQe3gI4J/SdCwA=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>TA</name>
+    <email>TA@TA.com</email>
+    <password>hDyt/rj7wnz/jE+Qo5zcCz0nIpw=</password>
+    <role>Staff</role>
+  </Member>
+  <Member>
+    <name>TA1</name>
+    <email>TA1@TA.com</email>
+    <password>hDyt/rj7wnz/jE+Qo5zcCz0nIpw=</password>
+    <role>Staff</role>
+  </Member>
+  <Member>
+    <name>sid</name>
+    <email>turpus@gmail.com</email>
+    <password>/UvluZzWjZaqGvEeQnwdvsmNhHY=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>cap</name>
+    <email>cap@cap.com</email>
+    <password>5ny3rqOD3acrg0NWp4ofIXuey0c=</password>
+    <role>Member</role>
+  </Member>
+  <Member>
+    <name>sid</name>
+    <email>sid@dis.com</email>
+    <password>JcJBRXYyllzwQVrObLjbkqeprdk=</password>
+    <role>Member</role>
+  </Member>
+</Members>

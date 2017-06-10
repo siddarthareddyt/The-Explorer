@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="NearestStoreDeal" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page4/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page4/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page4/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page4/Service1.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/NearestBestDeal" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="INearestStoreDeal_GetNearestStores_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNearestStores" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetNearestStores_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNearestStoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetNearestDeal_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetNearestDeal" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetNearestDeal_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetNearestDealResponse" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetLocalEvents_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalEvents" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetLocalEvents_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocalEventsResponse" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetLocationFromAdress_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationFromAdress" />
+  </wsdl:message>
+  <wsdl:message name="INearestStoreDeal_GetLocationFromAdress_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLocationFromAdressResponse" />
+  </wsdl:message>
+  <wsdl:portType name="INearestStoreDeal">
+    <wsdl:operation name="GetNearestStores">
+      <wsdl:input wsaw:Action="http://tempuri.org/INearestStoreDeal/GetNearestStores" message="tns:INearestStoreDeal_GetNearestStores_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INearestStoreDeal/GetNearestStoresResponse" message="tns:INearestStoreDeal_GetNearestStores_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetNearestDeal">
+      <wsdl:input wsaw:Action="http://tempuri.org/INearestStoreDeal/GetNearestDeal" message="tns:INearestStoreDeal_GetNearestDeal_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INearestStoreDeal/GetNearestDealResponse" message="tns:INearestStoreDeal_GetNearestDeal_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalEvents">
+      <wsdl:input wsaw:Action="http://tempuri.org/INearestStoreDeal/GetLocalEvents" message="tns:INearestStoreDeal_GetLocalEvents_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INearestStoreDeal/GetLocalEventsResponse" message="tns:INearestStoreDeal_GetLocalEvents_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationFromAdress">
+      <wsdl:input wsaw:Action="http://tempuri.org/INearestStoreDeal/GetLocationFromAdress" message="tns:INearestStoreDeal_GetLocationFromAdress_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/INearestStoreDeal/GetLocationFromAdressResponse" message="tns:INearestStoreDeal_GetLocationFromAdress_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_INearestStoreDeal" type="tns:INearestStoreDeal">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetNearestStores">
+      <soap:operation soapAction="http://tempuri.org/INearestStoreDeal/GetNearestStores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetNearestDeal">
+      <soap:operation soapAction="http://tempuri.org/INearestStoreDeal/GetNearestDeal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocalEvents">
+      <soap:operation soapAction="http://tempuri.org/INearestStoreDeal/GetLocalEvents" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLocationFromAdress">
+      <soap:operation soapAction="http://tempuri.org/INearestStoreDeal/GetLocationFromAdress" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="NearestStoreDeal">
+    <wsdl:port name="BasicHttpBinding_INearestStoreDeal" binding="tns:BasicHttpBinding_INearestStoreDeal">
+      <soap:address location="http://webstrar33.fulton.asu.edu/Page4/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

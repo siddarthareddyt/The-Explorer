@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/NearestBestDeal" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/NearestBestDeal" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://webstrar33.fulton.asu.edu/Page4/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:complexType name="ArrayOfResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="tns:Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfResult" nillable="true" type="tns:ArrayOfResult" />
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formatted_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="icon" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="opening_hours" nillable="true" type="tns:OpeningHours" />
+      <xs:element minOccurs="0" name="rating" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="types" nillable="true" type="q1:ArrayOfstring" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Result" nillable="true" type="tns:Result" />
+  <xs:complexType name="OpeningHours">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="open_now" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="OpeningHours" nillable="true" type="tns:OpeningHours" />
+  <xs:complexType name="ArrayOfSearchListing">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SearchListing" nillable="true" type="tns:SearchListing" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSearchListing" nillable="true" type="tns:ArrayOfSearchListing" />
+  <xs:complexType name="SearchListing">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="businessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="couponURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="coupons" nillable="true" type="tns:Coupons" />
+      <xs:element minOccurs="0" name="distance" type="xs:float" />
+      <xs:element minOccurs="0" name="phone" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="street" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="zip" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SearchListing" nillable="true" type="tns:SearchListing" />
+  <xs:complexType name="Coupons">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="coupon" nillable="true" type="tns:ArrayOfCoupon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Coupons" nillable="true" type="tns:Coupons" />
+  <xs:complexType name="ArrayOfCoupon">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Coupon" nillable="true" type="tns:Coupon" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfCoupon" nillable="true" type="tns:ArrayOfCoupon" />
+  <xs:complexType name="Coupon">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="couponCreatedAt" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="couponDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="couponDisclaimer" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="couponExpiration" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="couponStartDate" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="couponTitle" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Coupon" nillable="true" type="tns:Coupon" />
+  <xs:complexType name="Preferences">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="categeory" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="searchQuery" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Preferences" nillable="true" type="tns:Preferences" />
+  <xs:complexType name="ArrayOfEvent">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Event" nillable="true" type="tns:Event" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfEvent" nillable="true" type="tns:ArrayOfEvent" />
+  <xs:complexType name="Event">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="all_day" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="city_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="free" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="latitude" type="xs:float" />
+      <xs:element minOccurs="0" name="longitude" type="xs:float" />
+      <xs:element minOccurs="0" name="price" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="region_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="start_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="stop_time" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="title" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="url" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="venue_address" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Event" nillable="true" type="tns:Event" />
+  <xs:complexType name="Address">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="formatted_address" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="geometry" nillable="true" type="tns:Geometry" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Address" nillable="true" type="tns:Address" />
+  <xs:complexType name="Geometry">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="location" nillable="true" type="tns:Location" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Geometry" nillable="true" type="tns:Geometry" />
+  <xs:complexType name="Location">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="lat" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="lng" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Location" nillable="true" type="tns:Location" />
+</xs:schema>

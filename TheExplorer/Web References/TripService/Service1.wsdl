@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page9/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page9/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://webstrar33.fulton.asu.edu/Page9/Service1.svc?xsd=xsd2" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_getTripDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTripDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getTripDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTripDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNewsDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNewsDetails" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getNewsDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNewsDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getLatitudeLongitude_InputMessage">
+    <wsdl:part name="parameters" element="tns:getLatitudeLongitude" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getLatitudeLongitude_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getLatitudeLongitudeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCurrentTimeAtLocation_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrentTimeAtLocation" />
+  </wsdl:message>
+  <wsdl:message name="IService1_getCurrentTimeAtLocation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCurrentTimeAtLocationResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="getTripDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getTripDetails" message="tns:IService1_getTripDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getTripDetailsResponse" message="tns:IService1_getTripDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNewsDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getNewsDetails" message="tns:IService1_getNewsDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getNewsDetailsResponse" message="tns:IService1_getNewsDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getLatitudeLongitude">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getLatitudeLongitude" message="tns:IService1_getLatitudeLongitude_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getLatitudeLongitudeResponse" message="tns:IService1_getLatitudeLongitude_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentTimeAtLocation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/getCurrentTimeAtLocation" message="tns:IService1_getCurrentTimeAtLocation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/getCurrentTimeAtLocationResponse" message="tns:IService1_getCurrentTimeAtLocation_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getTripDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getTripDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getNewsDetails">
+      <soap:operation soapAction="http://tempuri.org/IService1/getNewsDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLatitudeLongitude">
+      <soap:operation soapAction="http://tempuri.org/IService1/getLatitudeLongitude" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getCurrentTimeAtLocation">
+      <soap:operation soapAction="http://tempuri.org/IService1/getCurrentTimeAtLocation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://webstrar33.fulton.asu.edu/Page9/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
